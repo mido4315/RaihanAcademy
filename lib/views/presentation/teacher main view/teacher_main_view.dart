@@ -3,6 +3,7 @@ import 'package:raihan_academy/core/colors.dart';
 import 'package:raihan_academy/views/widget/ScreenBackground.dart';
 
 import '../../../core/constant.dart';
+import '../lecturesTable/LectureTable.dart';
 
 class TeacherMainView extends StatelessWidget {
   const TeacherMainView({Key? key}) : super(key: key);
@@ -32,7 +33,7 @@ class TeacherMainView extends StatelessWidget {
                           ),
                           TeacherMainButton(
                             title: "جدول\nالحصص",
-                            onPressed: null,
+                            onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>LecturesTable()));},
                           ),
                         ],
                       ),

@@ -1,21 +1,20 @@
+
 import 'dart:ui';
 
-class PublicColor {
-
-  var patterrn = const Color(0xffFAF3DD);
-  var pbuttonink = const Color(0xffF1ECC3);
-  var white = const Color(0xffFAF3DD);
-  var lightgreen = const Color(0xffC8D5B9);
-  var ment = const Color(0xff8FC0A9);
-  var cyan = const Color(0xff68B0AB);
-  var darkGreen = const Color(0xff57837B);
-  var dark = const Color(0xff515E63);
-  var Wrong = const Color(0xffDA5E75);
-  var orange = const Color(0xffEDC26C);
-  var lightorange = const Color(0xffF8D795);
-  var verydark = const Color(0xff2A3338);
-  var teriary = const Color(0xffF6F6F5);
-  var darkerWrong = const Color(0xffB73F55);
+class PublicColor{
+  var white =Color(0xffFAF3DD);
+  var pbuttonink =Color(0xffF1ECC3);
+  var lightgreen =Color(0xffC8D5B9);
+  var ment =Color(0xff8FC0A9);
+  var cyan =Color(0xff68B0AB);
+  var darkGreen =Color(0xff57837B);
+  var dark =Color(0xff515E63);
+  var verydark =Color(0xff2A3338);
+  var lightorange =Color(0xffF8D795);
+  var orange =Color(0xffEDC26C);
+  var teriary =Color(0xffF6F6F5);
+  var wrong =Color(0xffDA5E75);
+  var darkerWrong =Color(0xffB73F55);
 }
 
 class AppColor {
