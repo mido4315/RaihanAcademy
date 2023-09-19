@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:raihan_academy/core/colors.dart';
 import 'package:raihan_academy/core/constant.dart';
+import 'package:raihan_academy/views/presentation/lecturesTable/widget/LectureDays.dart';
 import 'package:raihan_academy/views/widget/ScreenBackground.dart';
-
 import '../../widget/LectureInfo.dart';
-import '../../widget/LectureTableDays.dart';
-import '../../widget/modalBottomSheet.dart';
+import 'ButtomSheet.dart';
 
 class LecturesTable extends StatefulWidget {
   const LecturesTable({Key? key}) : super(key: key);
@@ -20,14 +19,18 @@ class _LecturesTableState extends State<LecturesTable> {
     return SafeArea(
       child: Scaffold(
         floatingActionButton: FloatingActionButton(
-          onPressed: (){
-            showDialog(context: context, builder: (context)=>BottomSheet(onClosing: (){}, builder: (context)=>Container()));
-            BottomSheet(onClosing: (){}, builder: (context)=>Container());
+          child: Icon(Icons.timer),
+          onPressed: () {
+            showModalBottomSheet(
+              context: context,
+              builder: (context) {
+                return const CusButtomSheet();
+              },
+            );
           },
         ),
         body: Stack(
           children: [
-
             ScreenBackground(),
             Container(
               padding: EdgeInsets.all(8),
@@ -87,15 +90,13 @@ class _LecturesTableState extends State<LecturesTable> {
                     ),
                   ),
                   Container(
-                    // height: mediaH*0.07,
-                    // width: mediaW*0.9,
                     padding: EdgeInsets.fromLTRB(8, 10, 8, 0),
                     decoration: BoxDecoration(
                         color: PublicColor().lightorange.withOpacity(0.5),
                         borderRadius: BorderRadius.circular(20)),
                     child: Column(
                       children: [
-                        LectureTableDays(),
+                        LectureDays(),
                         Container(
                           height: mediaH * 0.7,
                           width: mediaW * 0.9,
@@ -104,6 +105,8 @@ class _LecturesTableState extends State<LecturesTable> {
                               LectureInfo(isTest: true),
                               LectureInfo(isTest: false),
                               LectureInfo(isTest: true),
+                              LectureInfo(isTest: true),
+                              LectureInfo(isTest: false),
                             ],
                           ),
                         )
@@ -119,3 +122,5 @@ class _LecturesTableState extends State<LecturesTable> {
     );
   }
 }
+
+

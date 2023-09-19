@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:raihan_academy/views/presentation/lecturesTable/teacherTable.dart';
-import 'package:raihan_academy/views/presentation/teacher%20main%20view/teacher_main_view.dart';
-
-import 'views/presentation/students names/students_names_view.dart';
+import 'package:provider/provider.dart';
+import 'package:raihan_academy/state%20management/App%20Provider/AppProvider.dart';
+import 'package:raihan_academy/state%20management/App%20Provider/lectureTableProvider.dart';
+import 'package:raihan_academy/views/presentation/SplashScreen/SplashScreen.dart';
 
 
 GlobalKey<NavigatorState> _navigationKey = GlobalKey<NavigatorState>();
@@ -19,11 +19,19 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      navigatorKey: navigationKey,
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      home: const StudentNamesView(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<ProviderLectureTable>(create: (context)=>ProviderLectureTable()),
+        ChangeNotifierProvider<ProviderApp>(create: (context)=>ProviderApp()),
+      ],
+      child: MaterialApp(
+        navigatorKey: navigationKey,
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        home: SplashScreen(),
+      ),
     );
   }
 }
+
+
