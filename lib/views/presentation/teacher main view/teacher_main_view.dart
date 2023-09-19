@@ -3,6 +3,9 @@ import 'package:raihan_academy/core/colors.dart';
 import 'package:raihan_academy/views/widget/ScreenBackground.dart';
 
 import '../../../core/constant.dart';
+import '../../widget/custom_app_bar.dart';
+import 'widgets/teacher_main_button.dart';
+import 'widgets/welcome_message.dart';
 
 class TeacherMainView extends StatelessWidget {
   const TeacherMainView({Key? key}) : super(key: key);
@@ -18,12 +21,14 @@ class TeacherMainView extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 22),
               child: Column(
                 children: [
-                  const TeachMainAppBar(),
+                  const CustomAppBar(title: 'رسالة',),
                   const WelcomeMessage(),
-                  SizedBox(height: mediaH  * 0.01,),
+                  SizedBox(
+                    height: mediaH * 0.01,
+                  ),
                   Column(
                     children: [
-                      Row(
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           TeacherMainButton(
@@ -39,7 +44,7 @@ class TeacherMainView extends StatelessWidget {
                       SizedBox(
                         height: mediaH * 0.01,
                       ),
-                      Row(
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           TeacherMainButton(
@@ -55,7 +60,7 @@ class TeacherMainView extends StatelessWidget {
                       SizedBox(
                         height: mediaH * 0.01,
                       ),
-                      TeacherMainButton(
+                      const TeacherMainButton(
                         title: "الحصص\nالتجريبية",
                         onPressed: null,
                       ),
@@ -114,55 +119,6 @@ class TeacherMainView extends StatelessWidget {
   }
 }
 
-class TeacherMainButton extends StatelessWidget {
-  final String title;
-  final VoidCallback? onPressed;
-
-  const TeacherMainButton({
-    super.key,
-    required this.title,
-    required this.onPressed,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onPressed,
-      child: Container(
-        width: mediaW * 0.42,
-        height: mediaH * 0.2,
-        decoration: BoxDecoration(
-          boxShadow: const [
-            BoxShadow(
-              color: AppColor.darkGreen,
-              offset: Offset(2, 1),
-              blurRadius: 0,
-              spreadRadius: -1,
-            ),
-            BoxShadow(
-              color: AppColor.pattern,
-              offset: Offset(1, -1),
-              blurRadius: 1,
-              spreadRadius: -2,
-            ),
-          ],
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Center(
-          child: Text(
-            title,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              color: AppColor.darkGreen,
-              fontSize: 32,
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
 // class TeacherMainButton extends StatelessWidget {
 //   final String title;
 //   final VoidCallback? onPressed;
@@ -212,78 +168,3 @@ class TeacherMainButton extends StatelessWidget {
 //     );
 //   }
 // }
-
-class WelcomeMessage extends StatelessWidget {
-  const WelcomeMessage({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.centerRight,
-      child: RichText(
-        textAlign: TextAlign.right,
-        text: const TextSpan(
-          text: "مرحباً بك أستاذ",
-          style: TextStyle(
-              color: Colors.black, fontSize: 34, fontWeight: FontWeight.bold),
-          children: [
-            TextSpan(
-              text: ' علي',
-              style: TextStyle(
-                color: AppColor.mint,
-                fontSize: 34,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class TeachMainAppBar extends StatelessWidget {
-  const TeachMainAppBar({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: mediaH * 0.09,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Image.asset(
-            "assets/image/logo.png",
-            width: 0.12 * mediaW,
-          ),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: AppColor.darkGreen,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20.0),
-              ),
-              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 12),
-            ),
-            onPressed: () {},
-            child: Row(
-              children: [
-                const Icon(Icons.notifications_active_rounded),
-                SizedBox(
-                  width: mediaW * 0.04,
-                ),
-                const Text(
-                  "رسالة",
-                  style: TextStyle(fontSize: 20),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}

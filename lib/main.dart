@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:raihan_academy/views/presentation/lecturesTable/teacherTable.dart';
 import 'package:raihan_academy/views/presentation/teacher%20main%20view/teacher_main_view.dart';
 
+import 'views/presentation/students names/students_names_view.dart';
+
 
 GlobalKey<NavigatorState> _navigationKey = GlobalKey<NavigatorState>();
 GlobalKey<NavigatorState> get navigationKey => _navigationKey;
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
       navigatorKey: navigationKey,
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: const TeacherMainView(),
+      home: const StudentNamesView(),
     );
   }
 }
