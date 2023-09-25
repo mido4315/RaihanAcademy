@@ -23,7 +23,7 @@ class _LectureDaysState extends State<LectureDays> {
           height: mediaH*0.08,
           width: mediaW,
           decoration: BoxDecoration(
-            color: PublicColor().darkGreen,
+            color: AppColor.darkGreen,
             borderRadius: BorderRadius.circular(20),
           ),
           child: Row(
@@ -45,8 +45,8 @@ class _LectureDaysState extends State<LectureDays> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('${_.days[index]}',style: TextStyle(color: PublicColor().white),),
-                      Text('${20 -index}',style: TextStyle(color: PublicColor().ment),),
+                      Text('${_.days[index]}',style: TextStyle(color: AppColor.white),),
+                      Text('${20 -index}',style: TextStyle(color: AppColor.mint),),
                     ],
                   ),
                 ),

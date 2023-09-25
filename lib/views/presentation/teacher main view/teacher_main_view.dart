@@ -4,6 +4,7 @@ import 'package:raihan_academy/views/widget/ScreenBackground.dart';
 
 import '../../../core/constant.dart';
 import '../lecturesTable/LectureTable.dart';
+import '../students names/students_names_view.dart';
 
 class TeacherMainView extends StatelessWidget {
   const TeacherMainView({Key? key}) : super(key: key);
@@ -45,7 +46,7 @@ class TeacherMainView extends StatelessWidget {
                         children: [
                           TeacherMainButton(
                             title: "أسماء\nالطلاب",
-                            onPressed: null,
+                            onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>StudentNamesView()));},
                           ),
                           TeacherMainButton(
                             title: "مكافئات\nو جزاءات",
@@ -141,7 +142,7 @@ class TeacherMainButton extends StatelessWidget {
               spreadRadius: -1,
             ),
             BoxShadow(
-              color: AppColor.pattern,
+              color: AppColor.white,
               offset: Offset(1, -1),
               blurRadius: 1,
               spreadRadius: -2,

@@ -5,12 +5,12 @@ import '../../core/colors.dart';
 class ProviderLectureTable extends ChangeNotifier {
   int selected=0;
   List<String> days = ['الجمعة','الخميس','الأربعاء','الثلاثاء','الأثنين','الأحد','السبت'];
-  List<Color> dayColor=List.generate(7, (index) => PublicColor().darkGreen);
+  List<Color> dayColor=List.generate(7, (index) => AppColor.darkGreen);
 
 
   changeDayColor(){
-    dayColor = List.generate(dayColor.length, (index) => PublicColor().darkGreen);
-    dayColor[selected] = PublicColor().dark;
+    dayColor = List.generate(dayColor.length, (index) => AppColor.darkGreen);
+    dayColor[selected] = AppColor.dark;
     notifyListeners();
   }
 
@@ -37,21 +37,21 @@ class ProviderLectureTable extends ChangeNotifier {
     'م'
   ];
   List<Color> hourColor = [
-    PublicColor().dark,
-    PublicColor().wrong,
-    PublicColor().cyan,
-    PublicColor().cyan,
-    PublicColor().wrong,
-    PublicColor().dark,
-    PublicColor().dark,
-    PublicColor().dark,
-    PublicColor().cyan,
-    PublicColor().dark,
-    PublicColor().wrong,
-    PublicColor().wrong,
-    PublicColor().dark,
-    PublicColor().cyan,
-    PublicColor().dark,
+    AppColor.dark,
+    AppColor.wrong,
+    AppColor.cyan,
+    AppColor.cyan,
+    AppColor.wrong,
+    AppColor.dark,
+    AppColor.dark,
+    AppColor.dark,
+    AppColor.cyan,
+    AppColor.dark,
+    AppColor.wrong,
+    AppColor.wrong,
+    AppColor.dark,
+    AppColor.cyan,
+    AppColor.dark,
   ];
   List<double>hourshadow =[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
   setSelected(int time){
@@ -60,16 +60,16 @@ class ProviderLectureTable extends ChangeNotifier {
     notifyListeners();
   }
   setEmptyHour(){
-    hourColor=List.generate(hourColor.length, (index) => PublicColor().dark);
+    hourColor=List.generate(hourColor.length, (index) => AppColor.dark);
     notifyListeners();
   }
   setAvailableTime(){
-    hourColor[selected]=PublicColor().cyan;
+    hourColor[selected]=AppColor.cyan;
     print('${hourColor[selected]}');
     notifyListeners();
   }
   setUNavailableTime(){
-    hourColor[selected]=PublicColor().wrong;
+    hourColor[selected]=AppColor.wrong;
     notifyListeners();
   }
   setShadow(){

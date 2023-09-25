@@ -19,7 +19,7 @@ class _CusButtomSheetState extends State<CusButtomSheet> {
       return Container(
         height: mediaH * 0.6,
         width: mediaW,
-        color: PublicColor().white,
+        color: AppColor.white,
         child: Column(
           children: [
             Padding(
@@ -29,14 +29,14 @@ class _CusButtomSheetState extends State<CusButtomSheet> {
                 children: [
                   CusButtonBar(
                       text: ' إعاده ضبط',
-                      color: PublicColor().dark,
+                      color: AppColor.dark,
                       fun: () => p.setEmptyHour(),
                       conWidth: mediaW * 0.23),
                   Center(
                     child: Text(
                       'إعدادات اليوم',
                       style: TextStyle(
-                          color: PublicColor().verydark,
+                          color: AppColor.veryDark,
                           fontSize: mediaW * 0.08),
                     ),
                   ),
@@ -49,7 +49,7 @@ class _CusButtomSheetState extends State<CusButtomSheet> {
               height: mediaH * 0.13,
               width: mediaW * 0.9,
               decoration: BoxDecoration(
-                color: PublicColor().lightorange,
+                color: AppColor.lightOrange,
                 borderRadius: BorderRadius.circular(20),
               ),
               child: ListView(
@@ -85,12 +85,12 @@ class _CusButtomSheetState extends State<CusButtomSheet> {
                             Text(
                               '${p.hours[index]}',
                               style: TextStyle(
-                                  color: PublicColor().white, fontSize: 20),
+                                  color: AppColor.white, fontSize: 20),
                             ),
                             Text(
                               '${p.hourMod[index]}',
                               style: TextStyle(
-                                  color: PublicColor().teriary, fontSize: 25),
+                                  color: AppColor.tertiary, fontSize: 25),
                             ),
                           ],
                         ),
@@ -106,18 +106,18 @@ class _CusButtomSheetState extends State<CusButtomSheet> {
               children: [
                 CusButtonBar(
                     text: 'متاح',
-                    color: PublicColor().cyan,
+                    color: AppColor.cyan,
                     fun: () => p.setAvailableTime()),
                 CusButtonBar(
                     text: 'غير متاح',
-                    color: PublicColor().wrong,
+                    color: AppColor.wrong,
                     fun: () => p.setUNavailableTime()),
               ],
             ),
             SizedBox(height: mediaH * 0.03),
             CusButtonBar(
                 text: ' حفظ التغيرات',
-                color: PublicColor().lightorange,
+                color: AppColor.lightOrange,
                 fun: () {
                   Navigator.pop(context);
                   ScaffoldMessenger.of(context).showSnackBar(
@@ -131,7 +131,7 @@ class _CusButtomSheetState extends State<CusButtomSheet> {
                 },
                 conHeight: mediaH * 0.07,
                 conWidth: mediaW * 0.3,
-                textColor: PublicColor().dark),
+                textColor: AppColor.dark),
           ],
         ),
       );
@@ -161,7 +161,7 @@ class _CusButtomSheetState extends State<CusButtomSheet> {
             text,
             style: TextStyle(
                 fontSize: mediaW * 0.05,
-                color: textColor ?? PublicColor().white),
+                color: textColor ?? AppColor.white),
           ),
         ),
       ),

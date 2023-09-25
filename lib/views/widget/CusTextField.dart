@@ -16,18 +16,18 @@ class CusTextField extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          Text(textTitle,textAlign: TextAlign.end,style: TextStyle(fontSize: mediaW*0.07,color: PublicColor().verydark),),
+          Text(textTitle,textAlign: TextAlign.end,style: TextStyle(fontSize: mediaW*0.07,color: AppColor.veryDark),),
           TextField(
             controller: controller,
             textAlign: TextAlign.end,
             obscureText: passwordMod!,
             decoration: InputDecoration(
               filled: true,
-              fillColor: PublicColor().dark,
+              fillColor: AppColor.dark,
               prefixIcon: prefixIcon,
             ),
             style: TextStyle(
-              color: PublicColor().white,
+              color: AppColor.white,
               fontSize: mediaW*0.058
             ),
           ),

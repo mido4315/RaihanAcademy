@@ -73,14 +73,14 @@ class _LecturesTableState extends State<LecturesTable> {
                                 Text(
                                   'جدول الحصص',
                                   style: TextStyle(
-                                      color: PublicColor().darkGreen,
+                                      color: AppColor.darkGreen,
                                       fontSize: mediaW * 0.085),
                                 ),
                                 Text(
                                   ' الاربعاء ( 30 / 9 / 2023 )',
                                   style: TextStyle(
                                       fontSize: mediaW * 0.04,
-                                      color: PublicColor().ment),
+                                      color: AppColor.mint),
                                 ),
                               ],
                             ),
@@ -92,7 +92,7 @@ class _LecturesTableState extends State<LecturesTable> {
                   Container(
                     padding: EdgeInsets.fromLTRB(8, 10, 8, 0),
                     decoration: BoxDecoration(
-                        color: PublicColor().lightorange.withOpacity(0.5),
+                        color: AppColor.lightOrange.withOpacity(0.5),
                         borderRadius: BorderRadius.circular(20)),
                     child: Column(
                       children: [

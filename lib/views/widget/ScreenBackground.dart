@@ -10,7 +10,7 @@ class ScreenBackground extends StatelessWidget {
     return Container(
       height: mediaH,
       width: mediaW,
-      color: PublicColor().pbuttonink,
+      color: AppColor.buttonInk,
       child: const Opacity(
         opacity: 0.5,
         child: Image(

@@ -12,7 +12,7 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedSplashScreen(
-        backgroundColor: PublicColor().pbuttonink,
+        backgroundColor: AppColor.buttonInk,
         curve: Curves.bounceOut,
         duration:2000,
         splashIconSize:mediaH*0.3,

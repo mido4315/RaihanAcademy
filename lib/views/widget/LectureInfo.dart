@@ -20,7 +20,7 @@ class LectureInfo extends StatelessWidget {
             width: mediaW * 0.75,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: isTest ?PublicColor().teriary:PublicColor().cyan,
+              color: isTest ?AppColor.tertiary:AppColor.cyan,
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -29,34 +29,34 @@ class LectureInfo extends StatelessWidget {
                 isTest?Text(
                   'حصة تجريبية',
                   style: TextStyle(
-                      color: PublicColor().dark, fontSize: mediaW * 0.09),
+                      color: AppColor.dark, fontSize: mediaW * 0.09),
                 ):Text(
                   'حصة محجوزة',
                   style: TextStyle(
-                      color: PublicColor().orange, fontSize: mediaW * 0.09),
+                      color: AppColor.orange, fontSize: mediaW * 0.09),
                 ),
                 Text(
                   'الطالب  : اسامة انور',
                   style: TextStyle(
-                      color:isTest?PublicColor().dark: PublicColor().white, fontSize: mediaW * 0.07),
+                      color:isTest?AppColor.dark: AppColor.white, fontSize: mediaW * 0.07),
                 ),
                 Text(
                   'الحفظ : سورة الذاريات',
                   style: TextStyle(
-                      color:isTest?PublicColor().dark: PublicColor().white, fontSize: mediaW * 0.07),
+                      color:isTest?AppColor.dark: AppColor.white, fontSize: mediaW * 0.07),
                 ),
               ],
             ),
           ),
           Card(
-            color:isTest? PublicColor().dark:PublicColor().white,
+            color:isTest? AppColor.dark:AppColor.white,
             child: SizedBox(
               height: mediaH * 0.06,
               width: mediaW * 0.12,
               child: Center(
                 child: Text(
                   '10',
-                  style: TextStyle(color: isTest?PublicColor().white:PublicColor().dark),
+                  style: TextStyle(color: isTest?AppColor.white:AppColor.dark),
                 ),
               ),
             ),

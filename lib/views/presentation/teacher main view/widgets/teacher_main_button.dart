@@ -29,7 +29,7 @@ class TeacherMainButton extends StatelessWidget {
               spreadRadius: -1,
             ),
             BoxShadow(
-              color: AppColor.pattern,
+              color: AppColor.white,
               offset: Offset(1, -1),
               blurRadius: 1,
               spreadRadius: -2,

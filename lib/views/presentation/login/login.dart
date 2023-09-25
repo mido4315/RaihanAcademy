@@ -32,7 +32,7 @@ class _LoginState extends State<Login> {
           },
           child: Scaffold(
             resizeToAvoidBottomInset: false,
-            backgroundColor: PublicColor().white,
+            backgroundColor: AppColor.white,
             body: Stack(
               children: [
                 ScreenBackground(),
@@ -79,7 +79,7 @@ class _LoginState extends State<Login> {
                         icon: Icon(passwordEye
                             ? Icons.remove_red_eye
                             : Icons.remove_red_eye_outlined),
-                        color: PublicColor().white,
+                        color: AppColor.white,
                       ),
                     ),
                     SizedBox(
@@ -107,7 +107,7 @@ class _LoginState extends State<Login> {
                           );
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: PublicColor().darkGreen,
+                        backgroundColor: AppColor.darkGreen,
                       ),
                       child: Container(
                         height: mediaH * 0.07,
@@ -116,7 +116,7 @@ class _LoginState extends State<Login> {
                           child: Text(
                             'تسجيل الدخول ',
                             style: TextStyle(
-                                color: PublicColor().white,
+                                color: AppColor.white,
                                 fontSize: mediaW * 0.05),
                           ),
                         ),
